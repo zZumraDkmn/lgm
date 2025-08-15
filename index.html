@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <link rel="stylesheet" href="lg.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ʚ Ana Sayfa ɞ</title>
+    <link rel="stylesheet" href="lg.css"> <!-- Ana sayfa stili -->
     <style type="text/css">
         * {
             cursor: url(https://cur.cursors-4u.net/nature/nat-9/nat843.ani), 
@@ -13,14 +14,17 @@
     <a href="https://www.cursors-4u.com/cursor/2010/04/20/cute-orange-spinning-flower.html" target="_blank" title="Cute Orange Spinning Flower">
         <img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Cute Orange Spinning Flower" style="position:absolute; top: 0px; right: 0px;" />
     </a>
-    <title>ʚ Ana Sayfa ɞ</title>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <a href="LegendsGame.html"><img src="logom.png" alt="Logo"></a>
+        <a href="index.html"><img src="logom.png" alt="Logo"></a>
         <div class="logo">ʚ Legends Game ɞ</div>
         <nav>
-            <!-- Giriş Yap ve Ana Sayfa butonlarını kaldırdık -->
+            <!-- Giriş ve Kayıt butonları -->
+            <a href="login.html" class="login-btn">ʚ Giriş Yap ɞ</a>
+            <a href="kayit.html" class="login-btn">ʚ Kayıt Ol ɞ</a>
         </nav>
     </header>
 
@@ -36,13 +40,11 @@
         </aside>
 
         <!-- Sayfa İçeriği -->
-        <script src="data.js"></script>
-        <script src="java.js"></script>
-
         <main>
             <section class="webtoon-grid" data-category="page1">
                 <!-- Webtoon kartları buraya gelecek -->
             </section>
+
             <div class="pagination">
                 <div class="page-numbers">
                     <a href="LegendsGame.html" class="page-link">1</a>
@@ -67,5 +69,9 @@
             <a href="https://www.instagram.com/" title="Instagram">I</a>
         </div>
     </footer>
+
+    <!-- JS Dosyaları -->
+    <script src="data.js"></script>
+    <script src="java.js"></script>
 </body>
 </html>
