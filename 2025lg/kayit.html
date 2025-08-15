@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="Kayit.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="container">
+    </div>
+    <div class="form-page">
+      <button class="sound-btn" id="soundBtn">
+        <i class="fa-solid fa-bullhorn"></i>
+      </button>
+
+      <div class="register-form">
+        <h3>Kayıt Ol</h3>
+        <div id="warningBox" class="warning active minitext">
+          <p id="warningText">Kayıt Başarısız :</p>
+        </div>
+
+        <!-- Register Form -->
+        <form>
+          <input type="text" id="username" placeholder="Kullanıcı Adı" />
+          <input type="email" id="registerEmail" placeholder="E-posta" />
+          <div class="form-group">
+            <input type="password" id="registerPassword" placeholder="Şifre" />
+            <span>
+              <button type="button" id="eye-icon">
+                <i id="eyeOpen" class="fa-solid fa-eye"></i>
+                <i id="eyeClose" class="fa-solid fa-eye-slash active"></i>
+              </button>
+            </span>
+          </div>
+          <div class="form-group">
+            <input type="password" id="confirmPassword" placeholder="Şifreyi Onayla" />
+          </div>
+        </form>
+
+        <!-- Register Button -->
+        <button
+          type="button"
+          id="registerSubmit"
+          class="btn btn-register btn-colored"
+          onclick="registerRedirect()"
+        >
+          Kayıt Ol
+        </button>
+
+        <!-- Login Link -->
+        <p class="minitext" style="color: #fff">
+          Zaten bir hesabın var mı?
+          <a
+            id="loginText"
+            style="text-decoration: underline"
+            href="javascript:void(0)" 
+            onclick="goToLogin()"
+          >
+            Giriş Yap
+          </a>
+        </p>
+      </div>
+    </div>
+</div>
+
+<script>
+  // Kayıt Ol Butonuna Tıklanıp Kayıt İşlemi Tamamlandığında Yönlendirme
+  function registerRedirect() {
+    // Burada kayıt işlemleri yapılabilir
+    window.location.href = "login.html"; // Giriş sayfasına yönlendirme
+  }
+
+  // Giriş Yap Linkine Tıklanması Durumunda Giriş Sayfasına Gitme
+  function goToLogin() {
+    window.location.href = "login.html"; // Giriş sayfasına yönlendirme
+  }
+</script>
+
+</body>
+</html>

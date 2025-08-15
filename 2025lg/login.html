@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="container">
+    </div>
+    <div class="form-page">
+      <button class="sound-btn" id="soundBtn">
+        <i class="fa-solid fa-bullhorn"></i>
+      </button>
+
+      <div class="login-form">
+        <h3>Giriş Yap</h3>
+        <div id="warningBox" class="warning active minitext">
+          <p id="warningText">Login Failed :</p>
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <input type="email" id="loginEmail" placeholder="E-posta" />
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Şifre" />
+            <span>
+              <button type="button" id="eye-icon">
+                <i id="eyeOpen" class="fa-solid fa-eye"></i>
+                <i id="eyeClose" class="fa-solid fa-eye-slash active"></i>
+              </button>
+            </span>
+          </div>
+          <div class="remember-me">
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <p>Beni Hatırla</p>
+          </div>
+        </form>
+
+        <!-- Login Button -->
+        <button
+          type="button"
+          id="loginSubmit"
+          class="btn btn-login btn-colored"
+          onclick="loginRedirect()"
+        >
+          Giriş Yap
+        </button>
+
+        <!-- Sign Up Link -->
+        <p class="minitext" style="color: #fff">
+          Hesaba mı ihtiyacın var?
+          <a
+            id="signupText"
+            style="text-decoration: underline"
+            href="javascript:void(0)" 
+            onclick="goToSignUp()"
+          >
+            Kayıt Ol
+          </a>
+        </p>
+
+        <!-- Misafir olarak devam et Linki -->
+        <p class="minitext" style="color: #fff">
+          <a
+            id="guestText"
+            style="text-decoration: underline"
+            href="javascript:void(0)"
+            onclick="guestRedirect()"
+          >
+            Misafir Olarak Devam Et
+          </a>
+        </p>
+      </div>
+    </div>
+</div>
+
+<script>
+  // Giriş Butonuna Tıklandığında Yönlendirme
+  function loginRedirect() {
+    window.location.href = "LegendsGame.html";
+  }
+
+  // Misafir olarak devam et butonuna tıklanması durumunda
+   function guestRedirect() {
+    window.location.href = "LegendsGame.html"; // Misafir olarak giriş için yönlendirme
+  }
+
+  // Kayıt Ol Linkine Tıklanması Durumunda Kayıt Sayfasına Gitme
+  function goToSignUp() {
+    window.location.href = "kayit.html"; // Kayıt sayfasına yönlendirme
+  }
+</script>
+
+</body>
+</html>
