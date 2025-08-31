@@ -2,12 +2,14 @@
 body {
     background-image: url("moon3.jpg");
     background-repeat: no-repeat;
+    background-position: center center; /* Arka plan ortalanmış */
     background-size: cover;
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    width: 100vw; /* Tüm ekran genişliği */
 }
 
 /* Header */
@@ -17,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    width: auto;
+    width: 100%;
     background-color: #1c1c1c;
     height: 70px;
     color: #e5e6e1;
@@ -30,20 +32,19 @@ header img {
 }
 
 header img:hover {
-    transform: scale(1.1); /* Logoyu biraz büyüt */
-    filter: brightness(1.3) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Beyaz alanları parlat */
+    transform: scale(1.1);
+    filter: brightness(1.3) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
 }
-
 
 header .logo {
     align-items: center;
-    padding-left: 8%; /*ortadaki legends game yazısının yerini belirler*/
-    font-size: 45px;
+    padding-left: 8%;
+    font-size: 40px; /* Biraz küçültüldü */
     font-weight: bold;
     font-family: 'Microsoft Uighur';
-
 }
 
+/* Navigation */
 header nav {
     display: flex;
     gap: 20px;
@@ -52,70 +53,68 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px; /* Küçültüldü */
 }
 
 /* Home Butonu */
 header nav .home-btn {
     background: rgba(255, 255, 255, 0);
     color: white;
-    padding: 8px 12px;
+    padding: 6px 10px; /* Küçültüldü */
     border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 13px; /* Küçültüldü */
     font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s ease;
+    backdrop-filter: blur(6px);
 }
 
 header nav .home-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
-    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
 }
 
 /* Login Butonu */
 header nav .login-btn {
     background: rgba(255, 255, 255, 0.12);
     color: white;
-    padding: 8px 12px;
+    padding: 6px 10px;
     border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     gap: 6px;
-    width: 120px;
+    width: 110px; /* Küçültüldü */
     justify-content: center;
+    transition: 0.2s ease;
+    backdrop-filter: blur(6px);
 }
 
 header nav .login-btn img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
 }
 
 header nav .login-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
-    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.15);
 }
 
 /* Ana İçerik ve Sidebar */
 .container {
     display: flex;
     flex: 1;
+    width: 100%;
+    min-height: calc(100vh - 70px); /* Header düşüldü */
 }
 
 /* Sidebar */
 .sidebar {
-    width: 200px;
+    width: 220px; /* Biraz genişletildi */
     font-family: 'Microsoft Uighur';
     font-size: 25px;
     background-color: #1c1c1c85;
@@ -123,12 +122,12 @@ header nav .login-btn:hover {
     flex-direction: column;
     border-radius: 8px;
     padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
     box-shadow: 5px 4px 6px rgba(0, 0, 0, 0.3);
-    min-height: 100vh;
+    min-height: calc(100vh - 70px); /* Header düşüldü */
 }
 
+/* Sidebar Listeleri */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -153,8 +152,7 @@ header nav .login-btn:hover {
     background-color: #555;
     color: #fff;
     border-radius: 5px;
-    transition: background 0.6s ease, transform 0.2s ease, box-shadow 0.3s ease;
-
+    transition: 0.3s ease;
 }
 
 /* Sayfa İçeriği */
@@ -167,98 +165,44 @@ main {
 /* Footer */
 footer {
     background-color: #1c1c1c;
-    color: white;
+    color: #e5e6e1;
     padding: 30px 20px;
     text-align: center;
-    color: #e5e6e1;
     width: 100%;
-    position: relative;
-    margin-top: auto;
 }
 
-footer p {
-    margin: 10px 0;
-}
-
-footer a {
-    color: #e5e6e1;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer .social-icons a {
-    font-size: 20px;
-    margin: 0 15px;
-}
-
-/* Webtoon Grid */
+/* Webtoon Grid ve Kartları */
 .webtoon-grid {
     display: grid;
-    grid-template-columns: repeat(4, 370px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 1.5rem;
     gap: 1rem;
     justify-content: center;
 }
 
-/* Webtoon Kartı */
 .webtoon-card {
     background-color: #1c1c1c;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
     width: 280px;
     height: 500px;
     margin: auto;
-    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Hover Efekti */
 .webtoon-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 35px 5px rgba(250, 238, 173, 0.788);
 }
 
-/* Kart Resmi */
 .webtoon-card img {
     width: 100%;
     height: 400px;
     object-fit: cover;
     border-bottom: 2px solid #fdeeaf;
-    transition: opacity 0.3s ease-in-out;
-}
-
-/* Kart Bilgisi */
-.webtoon-info {
-    padding: 15px;
-    background: linear-gradient(to bottom, #222, #1c1c1c);
-}
-
-.webtoon-info h3 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-    color: white;
-}
-
-.genre-tag {
-    padding: 0.2rem 0.6rem;
-    font-size: 0.8rem;
-    margin: 0.3rem 0;
-    background: #fdeeaf;
-    border-radius: 5px;
-    color: black;
-    display: inline-block;
-}
-
-.webtoon-info .rating {
-    font-size: 15px;
-    color: white;
 }
 
 /* Overlay */
@@ -270,7 +214,6 @@ footer .social-icons a {
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
     color: white;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,53 +227,6 @@ footer .social-icons a {
 .webtoon-card:hover .webtoon-overlay {
     opacity: 1;
 }
-
-/* No Results */
-.no-results {
-    padding: 3rem;
-    text-align: center;
-}
-
-.no-results .warning-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.pagination {
-    --transition-timing: 0.2s;
-    --item-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem; /* Kutular arasındaki mesafe arttı */
-    margin: 1.5rem auto;
-    flex-wrap: wrap;
-}
-
-.page-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.3rem 0.7rem;
-    min-width: var(--item-size);
-    height: var(--item-size);
-    background: #222;
-    color: #FFD580; /* Soft sarı renk */
-    border-radius: 8px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 
-        background-color var(--transition-timing) ease,
-        transform var(--transition-timing) ease,
-        box-shadow var(--transition-timing) ease;
-    border: none;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-}
-
-.page-link:hover {
-    box-shadow: 0 0 8px rgba(255, 253, 165, 0.6);
-}
-
 
 /* Özel Cursor */
 * {
