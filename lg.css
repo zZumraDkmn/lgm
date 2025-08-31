@@ -1,4 +1,4 @@
-/* Sayfanın tamamı */
+/* Genel body ayarları */
 body {
   margin: 0;
   padding: 0;
@@ -6,27 +6,36 @@ body {
   background-color: #1c1c1c;
   color: white;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  overflow: hidden;
 }
 
-/* Sol Menü */
+/* Sayfa kapsayıcı */
+.container {
+  width: 80%;           /* Orijinal %80 genişlik */
+  max-width: 1920px;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Sidebar */
 .sidebar {
   background-color: #111;
-  width: 15%; /* ekranın %15’i */
-  min-width: 180px; /* çok küçülmesin */
-  max-width: 280px; /* çok büyümesin */
+  width: 15%;
+  min-width: 200px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-/* Menü Elemanları */
+/* Sidebar liste elemanları */
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -44,23 +53,28 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
 }
 
-/* Başlık */
+/* Header / Başlık */
 .header {
-  padding: 15px;
-  background-color: #222;
-  font-size: 1.5rem;
+  font-size: 2rem;   /* Giriş Yap ve Ana Sayfa */
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Kartlar Alanı */
+/* Ortadaki LegendsGame yazısı */
+.legendsgame {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Kartlar alanı */
 .content {
-  flex: 1;
-  padding: 20px;
+  width: 90%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   overflow-y: auto;
 }
@@ -70,7 +84,7 @@ body {
   background-color: #333;
   border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
   text-align: center;
   transition: transform 0.3s;
 }
@@ -91,7 +105,7 @@ body {
 /* Küçük ekran uyumu */
 @media (max-width: 768px) {
   .sidebar {
-    width: 60px; /* küçük ekranda daralır */
+    width: 60px;
     min-width: 60px;
     padding: 10px;
   }
@@ -101,6 +115,10 @@ body {
   }
 
   .header {
+    font-size: 1.5rem;
+  }
+
+  .legendsgame {
     font-size: 1.2rem;
   }
 
