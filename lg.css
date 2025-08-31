@@ -26,6 +26,7 @@ header {
 
 header img {
     width: 5vw;
+    max-width: 100px;
     height: auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
@@ -39,6 +40,7 @@ header .logo {
     align-items: center;
     padding-left: 8%;
     font-size: 3vw;
+    max-font-size: 45px;
     font-weight: bold;
     font-family: 'Microsoft Uighur';
 }
@@ -48,28 +50,33 @@ header nav {
     gap: 2vw;
 }
 
+/* Nav Linkleri */
 header nav a {
     color: white;
     text-decoration: none;
     font-size: 1vw;
+    max-font-size: 16px;
 }
 
 /* Home Butonu */
 header nav .home-btn {
     background: rgba(255, 255, 255, 0);
     color: white;
-    padding: 0.8vh 1.2vw;
-    border-radius: 2vw;
-    text-decoration: none;
+    padding: 0.5vh 1vw;
+    border-radius: 20px;
     font-size: 1vw;
+    max-font-size: 14px;
     font-weight: 500;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 120px;
+    max-height: 40px;
 }
 
+/* Hover Home */
 header nav .home-btn:hover {
     background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
@@ -80,30 +87,25 @@ header nav .home-btn:hover {
 header nav .login-btn {
     background: rgba(255, 255, 255, 0.12);
     color: white;
-    padding: 0.8vh 1.2vw;
-    border-radius: 2vw;
-    text-decoration: none;
+    padding: 0.5vh 1vw;
+    border-radius: 20px;
     font-size: 1vw;
+    max-font-size: 14px;
     font-weight: 500;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
-    gap: 0.5vw;
-    width: 12vw;
+    gap: 6px;
+    width: auto;
     justify-content: center;
+    max-width: 140px;
+    max-height: 40px;
 }
 
 header nav .login-btn img {
-    width: 2vw;
-    height: auto;
-    border-radius: 50%;
-}
-
-header nav .login-btn:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: scale(1.05);
-    box-shadow: 0 0.3vw 0.8vw rgba(255, 255, 255, 0.15);
+    width: 20px;
+    height: 20px;
 }
 
 /* Ana İçerik ve Sidebar */
