@@ -7,15 +7,17 @@ body {
   color: white;
   display: flex;
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* sağa kaymayı engeller */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Sol Menü */
 .sidebar {
   background-color: #111;
   width: 15%; /* ekranın %15’i */
-  min-width: 180px; /* çok küçülmesin */
-  max-width: 280px; /* çok büyümesin */
+  min-width: 180px;
+  max-width: 280px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -27,6 +29,7 @@ body {
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -45,6 +48,8 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
+  max-width: calc(100% - 180px); /* sidebar minimum genişliği ile uyumlu */
 }
 
 /* Başlık */
@@ -60,7 +65,7 @@ body {
   flex: 1;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   overflow-y: auto;
 }
@@ -81,7 +86,7 @@ body {
 
 .card h3 {
   margin: 0 0 10px;
-  font-size: 1.3rem;
+  font-size: 1.2rem; /* biraz küçültüldü */
 }
 
 .card p {
@@ -91,7 +96,7 @@ body {
 /* Küçük ekran uyumu */
 @media (max-width: 768px) {
   .sidebar {
-    width: 60px; /* küçük ekranda daralır */
+    width: 60px;
     min-width: 60px;
     padding: 10px;
   }
@@ -112,5 +117,3 @@ body {
     font-size: 0.9rem;
   }
 }
-
-
