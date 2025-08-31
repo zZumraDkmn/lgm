@@ -1,199 +1,150 @@
-/* Genel Sayfa Stili */
+/* Sayfanın tamamı */
 body {
-    background-image: url("moon3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: white;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Header */
-header {
-    display: flex;
-    font-family: 'Palatino Linotype';
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-    background-color: #1c1c1c;
-    height: 70px;
-    color: #e5e6e1;
-}
-
-header img {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-
-header img:hover {
-    transform: scale(1.1);
-    filter: brightness(1.3) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-}
-
-header .logo {
-    align-items: center;
-    padding-left: 2%; /* LegendsGame yazısı hafif sola kaydı */
-    font-size: 2.2vw; /* responsive font */
-    font-weight: bold;
-    font-family: 'Microsoft Uighur';
-}
-
-header nav {
-    display: flex;
-    gap: 20px;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1vw; /* responsive */
-}
-
-header nav .home-btn,
-header nav .login-btn {
-    padding: 0.5vw 1vw;
-    font-size: 0.9vw;
-    border-radius: 1vw;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header nav .login-btn img {
-    width: 1.2vw;
-    height: 1.2vw;
-    border-radius: 50%;
-}
-
-/* Ana İçerik ve Sidebar */
-.container {
-    display: flex;
-    flex: 1;
-    width: 100%; /* %100 genişlik */
-    max-width: 1920px;
-    margin: 0 auto; /* ortalama */
-}
-
-/* Sidebar */
+/* Sol Menü */
 .sidebar {
-    width: 12%; /* ekranın %12si */
-    min-width: 180px;
-    font-family: 'Microsoft Uighur';
-    font-size: 1.5vw; /* responsive */
-    background-color: #1c1c1c85;
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5vw;
-    padding: 1vw;
-    margin: 1vw 0;
-    box-shadow: 0.3vw 0.3vw 0.5vw rgba(0,0,0,0.3);
-    min-height: 100vh;
+  background-color: #111;
+  width: 15%;
+  min-width: 180px;
+  max-width: 280px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Menü Elemanları */
 .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    flex-grow: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.sidebar ul li a {
-    color: #e5e6e1;
-    text-decoration: none;
-    display: block;
-    padding: 0.5vw 1vw;
-    border-radius: 0.3vw;
-    transition: background 0.3s ease;
+.sidebar li {
+  padding: 10px 0;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.sidebar ul li a:hover {
-    background-color: #555;
+.sidebar li:hover {
+  color: #00bfff;
 }
 
-/* Sayfa İçeriği */
-main {
-    flex-grow: 1;
-    padding: 1vw;
-    color: #fff;
+/* Ana içerik */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-/* Webtoon Grid */
-.webtoon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18vw, 1fr));
-    padding: 2vw;
-    gap: 1.5vw;
-    justify-content: center;
+/* Başlık */
+.header {
+  padding: 15px;
+  background-color: #222;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-/* Webtoon Kartı */
-.webtoon-card {
-    background-color: #1c1c1c;
-    border-radius: 0.5vw;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0px 0.2vw 0.5vw rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
-    width: 100%;
-    height: 28vw; /* responsive */
-    margin-bottom: 2vw;
+/* Kartlar Alanı */
+.content {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
 }
 
-.webtoon-card img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    border-bottom: 0.2vw solid #fdeeaf;
-    transition: opacity 0.3s ease-in-out;
+/* Kartlar */
+.card {
+  background-color: #333;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-.webtoon-info {
-    padding: 1vw;
-    background: linear-gradient(to bottom, #222, #1c1c1c);
+.card:hover {
+  transform: scale(1.05);
 }
 
-.webtoon-info h3 {
-    font-size: 1vw;
-    margin-bottom: 0.4vw;
-    color: white;
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
 }
 
-.genre-tag {
-    padding: 0.2vw 0.5vw;
-    font-size: 0.8vw;
-    margin: 0.3vw 0;
-    background: #fdeeaf;
-    border-radius: 0.3vw;
-    color: black;
-    display: inline-block;
+.card p {
+  font-size: 1rem;
 }
 
-/* Responsive overlay */
-.webtoon-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-    color: white;
-    padding: 1vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none;
+/* Scroll ve taşmayı engelleme */
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.webtoon-card:hover .webtoon-overlay {
-    opacity: 1;
+.main-content, .content {
+  overflow-y: auto;
+}
+
+/* Küçük ekran uyumu */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 18%;
+    min-width: 150px;
+    max-width: 220px;
+  }
+
+  .sidebar li {
+    font-size: 1rem;
+  }
+
+  .header {
+    font-size: 1.3rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+    min-width: 60px;
+    padding: 10px;
+  }
+
+  .sidebar li {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
 }
