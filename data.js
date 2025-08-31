@@ -146,7 +146,7 @@ const allWebtoons=[{
     id: 17,
     title: "Demon Slayer The Hinokami Chronicles",
     genre: "Anime",
-    image: "demonslayer.jpg",
+    image: "demonSlayer.jpg",
     rating: "59.99",
     description: "Demon Slayer: Kimetsu no Yaiba'dan unutulmaz anları Tanjiro Kamado'nun gözünden yeniden yaşayın! Tanjiro'nun Demon Slayer Corps'a katıldığı Unwavering Resolve Arc'tan, Flame Hashira Kyojuro Rengoku'nun yer aldığı Mugen Train'e kadar olan hikayeyi takip edin. 24 dövüşçü arasından Tanjiro, Nezuko gibi ana karakterler ve Rui, Akaza gibi demonları seçerek favori karakterlerinizi birbirine karşı dövüştürün!",
     category: "page3",
@@ -286,4 +286,5 @@ const allWebtoons=[{
     description: "Her gün bana gelir, işlerimi yapar, yemek yapar ve bana hediye alırsın. Ne kadar naziksin! Seni seviyorum! Her gün seninle olmak istiyorum, birlikte yaşamak... Biliyorum, sen de benimle olmak istiyorsun, bu yüzden seni tatlı evimize davet ediyorum. Nasıl, mutlu oldun mu? Böylece her zaman birlikte olabiliriz!",
     category: "page4",
 },
+
 ]
