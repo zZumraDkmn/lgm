@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initializePage();
   setupEventListeners();
   renderInitialWebtoons();
-  
+  renderInitialWebtoons2();
 
   
   // Ek işlevsellikler: FAQ ve dropdown dokunmatik desteği
