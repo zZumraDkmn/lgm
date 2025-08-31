@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeFAQ();
   initializePage();
   setupEventListeners();
-  renderInitialWebtoons();
   renderInitialWebtoons2();
+  renderInitialWebtoons();
 
   
   // Ek işlevsellikler: FAQ ve dropdown dokunmatik desteği
@@ -357,4 +357,5 @@ document.querySelectorAll('.faq-question').forEach(question => {
   });
 });
 }
+
 
